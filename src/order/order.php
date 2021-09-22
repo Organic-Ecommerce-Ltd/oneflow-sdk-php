@@ -23,9 +23,12 @@ class OneFlowOrder extends OneFlowBase	{
 
 		$this->__addObject("orderData",		"OrderData");
 		$this->__addObject("destination",	"Point");
-		$this->__addObject("source",		"Point");
 
-		$this->__addArray("files",			"String");
+		/**
+		 * Manually removed - order submission keeps failing with these ones
+		 */
+		// $this->__addObject("source",		"Point");
+		// $this->__addArray("files",			"String");
 
 		$this->__addProperty("_id");
 

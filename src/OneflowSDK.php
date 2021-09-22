@@ -23,7 +23,8 @@ class OneFlowSDKLoader {
 			'finish'=>'OneFlowFinish',
 			'shipTo'=>'OneFlowAddress',
 			'returnAddress'=>'OneFlowReturnAddress',
-			'carrier'=>'OneFlowCarrier'
+			'carrier'=>'OneFlowCarrier',
+			'cost'=>'OneFlowCost'
 		);
 
 	}

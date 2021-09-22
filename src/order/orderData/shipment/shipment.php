@@ -3,6 +3,7 @@
 require_once "carrier/carrier.php";
 require_once "address/address.php";
 require_once "attachments/attachments.php";
+require_once "cost/cost.php";
 
 /**
  * OneFlowShipment class.
@@ -27,7 +28,7 @@ class OneFlowShipment extends OneFlowBase {
 		$this->__addProperty("shipmentIndex", 0, true);
 		$this->__addProperty("pspBranding", true);
 		$this->__addProperty("labelName");
-		$this->__addProperty("cost");
+		// $this->__addProperty("cost");
 		$this->__addProperty("slaDays");
 		$this->__addProperty("dispatchAlert");
 		$this->__addProperty("canShipEarly");
@@ -212,6 +213,22 @@ class OneFlowShipment extends OneFlowBase {
 	public function setShipByDate($shipByDate)
 	{
 		$this->shipByDate = $shipByDate;
+	}
+
+	/**
+	 * setCost function.
+	 *
+	 * @access public
+	 * @param mixed $value
+	 * @param mixed $currency
+	 * @return void
+	 */
+	public function setCost($value, $currency)
+	{
+		$this->__addObject("cost","Cost");
+
+		$this->cost->value = $value;
+		$this->cost->currency = $currency;
 	}
 }
 
